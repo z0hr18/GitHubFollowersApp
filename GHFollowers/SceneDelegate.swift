@@ -9,14 +9,49 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow? //evveler bu appdelegatein icindeydi. indi sceneDelegatededi. SceneDelegate butun UI-lari configure edir bele olanda.
 
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) { 
+        guard let windowScene  = (scene as? UIWindowScene) else { return }
+        
+       //     bunlari sildi, cunki asaqida funclarini yaratdi.
+        
+//        let searchNC = UINavigationController(rootViewController: SearchVC())
+//        let favoriteNC = UINavigationController(rootViewController: FavoriteListVC())
+//        
+//        let tabbar = UITabBarController()
+//        tabbar.viewControllers = [searchNC, favoriteNC]
+        
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = createTabbar()
+        window?.makeKeyAndVisible()
+    }
+    
+    func createSearchNavigationController() -> UINavigationController {
+         let searchVC = SearchVC()
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0) //tag tabbardaki barin indexidi. 0-ci searchVC
+//        let navController = UINavigationController(rootViewController: searchVC)
+//        searchVC.navigationController?.navigationBar.backgroundColor = .white
+        return UINavigationController(rootViewController: searchVC)
+    }
+    
+    func createFavoriteNavigationController() -> UINavigationController {
+        let favoritesListVC = FavoriteListVC()
+        favoritesListVC.title = "Favorites"
+        favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        
+        return UINavigationController(rootViewController: favoritesListVC ) // burda yazanda 2 dene favoritelistVC kimi cixir. L yazilan Local variabledir. C ise class.
+    }
+    
+    func createTabbar() -> UITabBarController {
+        let tabbar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemGreen
+        tabbar.tabBar.backgroundColor = .white
+        tabbar.viewControllers = [createSearchNavigationController(), createFavoriteNavigationController() ]
+        return tabbar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
