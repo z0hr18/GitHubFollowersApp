@@ -13,6 +13,6 @@ class FavoriteListVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         
-        setupNavigationBar(backgroundColor: .red, titleColor: .yellow)
+        setupNavigationBar(backgroundColor: .white, titleColor: .black)
     }
 }
