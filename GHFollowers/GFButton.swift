@@ -8,8 +8,8 @@
 import UIKit
 
 class GFButton: UIButton {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(frame: CGRect) {//bu GFButton classinin bir frame ile cercive ile basladilmasini saglayir.
+        super.init(frame: frame) // bu ise UIButton classinin
         configure()
     }
     
@@ -18,8 +18,9 @@ class GFButton: UIButton {
     }
     
     //custom initialize
-    init(backGroundColor: UIColor, title: String) {
-        super.init(frame: .zero) //frameleri buttona gore ayarlayacagimiz ucun burda sifirlayiriq
+    init(backGroundColor: UIColor, title: String) { // iki parametre alır: bir arka plan rengi ve bir başlık. Bu başlatıcı, GFButton örneğinin başlangıçta belirli bir arka plan rengi ve başlık ile yaratılmasını sağlar.
+        
+        super.init(frame: .zero) //UIButton'un çerçevesi başlangıçta boş (zero) olarak ayarlanır, çünkü bu çerçeve daha sonra belirlenecektir
         self.backgroundColor = backGroundColor //burda self yazmasaq da olar adlari eyni olsa yazmagimiz vacibdir ki dogru tapsin
         self.setTitle(title, for: .normal)
         configure()
@@ -29,8 +30,8 @@ class GFButton: UIButton {
     private func configure() {
         layer.cornerRadius       = 10
         titleLabel?.textColor    = .white
-        titleLabel?.font         = UIFont.preferredFont(forTextStyle: .headline) //bu userin telefon ayarlarina gore tenzimlenir
-        translatesAutoresizingMaskIntoConstraints = false
+        titleLabel?.font         = UIFont.preferredFont(forTextStyle: .headline) //bu userin sistem ayarlarina gore tenzimlenir
+        translatesAutoresizingMaskIntoConstraints = false //Butonun çerçevesinin Auto Layout kuralları ile belirlenebilmesi için UIKit'in eski pozisyon belirleme sisteminin kullanımını devre dışı bırakır.
     }
     
 }

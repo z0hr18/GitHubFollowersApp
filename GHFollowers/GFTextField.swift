@@ -11,6 +11,7 @@ class GFTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -27,11 +28,11 @@ class GFTextField: UITextField {
         tintColor = .label
         textAlignment = .center
         font = UIFont.preferredFont(forTextStyle: .title2)
-        adjustsFontSizeToFitWidth = true
+        adjustsFontSizeToFitWidth = true //Hocam bunun olayi sey. Cok uzun username verirsen ve eger textField'a sigmazsa onu sigacak sekilde fitlestiriyor.
         minimumFontSize = 12
         
-        backgroundColor = .tertiarySystemBackground
-        autocorrectionType = .no
+        self.backgroundColor = .tertiarySystemBackground
+        autocorrectionType = .no //textfielddeki avto duzenlemeni sondurmek ucundur.
          
         placeholder = "User adınızı daxil edin"
     }
