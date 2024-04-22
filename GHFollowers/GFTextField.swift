@@ -33,7 +33,9 @@ class GFTextField: UITextField {
         
         self.backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no //textfielddeki avto duzenlemeni sondurmek ucundur.
-         
+        keyboardType = .default
+        returnKeyType = .go
+        
         placeholder = "User adınızı daxil edin"
     }
 }

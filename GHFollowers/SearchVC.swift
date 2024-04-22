@@ -11,8 +11,9 @@ class SearchVC: UIViewController {
     
     let logoImage =  UIImageView()
     let userNameTextfield = GFTextField()
-    let callToAcrionButton =  GFButton(backGroundColor: .systemGreen , title: "Get Followers ")
+    let callToActionButton =  GFButton(backGroundColor: .systemGreen , title: "Get Followers ")
     
+    var isUsernamedEntered: Bool { return !userNameTextfield.text!.isEmpty  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +21,34 @@ class SearchVC: UIViewController {
         setupNavigationBar()
         configureLogoImage()
         configureTextField()
+        configureCallToActionButton()
+        createDismissKeyboardTapGesture()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
         
     }
+    
+    func createDismissKeyboardTapGesture() {//bu function keyboard acildiqdan sonra viewya click edende onun dismiss edilmesidir.
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
+    
+   @objc func pushFollowerListVC() {
+       guard isUsernamedEntered else {
+           print("No Username")
+           return
+       }
+       
+       let followerListVC = FollowerListVC()
+       followerListVC.username = userNameTextfield.text
+       followerListVC.title = userNameTextfield.text
+       navigationController?.pushViewController(followerListVC, animated: true)
+    }
+    
+    
     
     func configureLogoImage() {
         view.addSubview(logoImage)
@@ -43,6 +66,7 @@ class SearchVC: UIViewController {
     func configureTextField() {
         view.addSubview(userNameTextfield)
         userNameTextfield.translatesAutoresizingMaskIntoConstraints = false
+        userNameTextfield.delegate = self
 //        userNameTextfield.backgroundColor = .yellow
         
         NSLayoutConstraint.activate([
@@ -52,6 +76,28 @@ class SearchVC: UIViewController {
             userNameTextfield.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    
+    
+    func configureCallToActionButton() {
+        view.addSubview(callToActionButton)
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        callToActionButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            callToActionButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
 }
 
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool { //keyboardda "go" ya click edende something do
+        pushFollowerListVC()
+        
+//        print("Tapped")
+        return true
+    }
+}
 
