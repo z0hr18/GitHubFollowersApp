@@ -21,6 +21,7 @@
 		B8C081562BD62AF400FADBED /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081552BD62AF400FADBED /* GFTextField.swift */; };
 		B8C081582BD66F7A00FADBED /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081572BD66F7A00FADBED /* FollowerListVC.swift */; };
 		B8C0815A2BD6900200FADBED /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081592BD6900200FADBED /* GFTitleLabel.swift */; };
+		B8C0815C2BD6A31400FADBED /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0815B2BD6A31400FADBED /* GFBodyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B8C081552BD62AF400FADBED /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		B8C081572BD66F7A00FADBED /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		B8C081592BD6900200FADBED /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
+		B8C0815B2BD6A31400FADBED /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				B8C081532BD1586C00FADBED /* GFButton.swift */,
 				B8C081552BD62AF400FADBED /* GFTextField.swift */,
 				B8C081592BD6900200FADBED /* GFTitleLabel.swift */,
+				B8C0815B2BD6A31400FADBED /* GFBodyLabel.swift */,
 				B81221AB2BD10C8D0023950A /* Assets.xcassets */,
 				B81221AD2BD10C8D0023950A /* LaunchScreen.storyboard */,
 				B81221B02BD10C8D0023950A /* Info.plist */,
@@ -281,6 +284,7 @@
 				B8C0815A2BD6900200FADBED /* GFTitleLabel.swift in Sources */,
 				B8C081582BD66F7A00FADBED /* FollowerListVC.swift in Sources */,
 				B8C081562BD62AF400FADBED /* GFTextField.swift in Sources */,
+				B8C0815C2BD6A31400FADBED /* GFBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
