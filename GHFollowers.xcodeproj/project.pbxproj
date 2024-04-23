@@ -22,6 +22,7 @@
 		B8C081582BD66F7A00FADBED /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081572BD66F7A00FADBED /* FollowerListVC.swift */; };
 		B8C0815A2BD6900200FADBED /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081592BD6900200FADBED /* GFTitleLabel.swift */; };
 		B8C0815C2BD6A31400FADBED /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0815B2BD6A31400FADBED /* GFBodyLabel.swift */; };
+		B8C081652BD7ECE600FADBED /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081642BD7ECE600FADBED /* GFAlertVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B8C081572BD66F7A00FADBED /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		B8C081592BD6900200FADBED /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		B8C0815B2BD6A31400FADBED /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
+		B8C081642BD7ECE600FADBED /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				B81221AD2BD10C8D0023950A /* LaunchScreen.storyboard */,
 				B81221B02BD10C8D0023950A /* Info.plist */,
 				B8C0814D2BD12FAD00FADBED /* SearchVC.swift */,
+				B8C081642BD7ECE600FADBED /* GFAlertVC.swift */,
 				B8C081572BD66F7A00FADBED /* FollowerListVC.swift */,
 				B8C0814F2BD1306700FADBED /* FavoriteListVC.swift */,
 				B8C081512BD14F3D00FADBED /* Extension.swift */,
@@ -280,6 +283,7 @@
 				B8C081542BD1586C00FADBED /* GFButton.swift in Sources */,
 				B8C0814E2BD12FAD00FADBED /* SearchVC.swift in Sources */,
 				B81221A32BD10C8C0023950A /* AppDelegate.swift in Sources */,
+				B8C081652BD7ECE600FADBED /* GFAlertVC.swift in Sources */,
 				B81221A52BD10C8C0023950A /* SceneDelegate.swift in Sources */,
 				B8C0815A2BD6900200FADBED /* GFTitleLabel.swift in Sources */,
 				B8C081582BD66F7A00FADBED /* FollowerListVC.swift in Sources */,
