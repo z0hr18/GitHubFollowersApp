@@ -23,6 +23,7 @@
 		B8C0815A2BD6900200FADBED /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081592BD6900200FADBED /* GFTitleLabel.swift */; };
 		B8C0815C2BD6A31400FADBED /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0815B2BD6A31400FADBED /* GFBodyLabel.swift */; };
 		B8C081652BD7ECE600FADBED /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C081642BD7ECE600FADBED /* GFAlertVC.swift */; };
+		B8D321AC2BDA2C84007E74FA /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D321AB2BDA2C84007E74FA /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B8C081592BD6900200FADBED /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		B8C0815B2BD6A31400FADBED /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		B8C081642BD7ECE600FADBED /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		B8D321AB2BDA2C84007E74FA /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				B8C081642BD7ECE600FADBED /* GFAlertVC.swift */,
 				B8C081572BD66F7A00FADBED /* FollowerListVC.swift */,
 				B8C0814F2BD1306700FADBED /* FavoriteListVC.swift */,
+				B8D321AB2BDA2C84007E74FA /* UIViewController+Ext.swift */,
 				B8C081512BD14F3D00FADBED /* Extension.swift */,
 			);
 			path = GHFollowers;
@@ -280,6 +283,7 @@
 			files = (
 				B8C081522BD14F3D00FADBED /* Extension.swift in Sources */,
 				B8C081502BD1306700FADBED /* FavoriteListVC.swift in Sources */,
+				B8D321AC2BDA2C84007E74FA /* UIViewController+Ext.swift in Sources */,
 				B8C081542BD1586C00FADBED /* GFButton.swift in Sources */,
 				B8C0814E2BD12FAD00FADBED /* SearchVC.swift in Sources */,
 				B81221A32BD10C8C0023950A /* AppDelegate.swift in Sources */,
